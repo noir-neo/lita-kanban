@@ -20,6 +20,16 @@ module Lita
       end
 
       def stories(after_story_id, before_story_id)
+        if Lita.config.handlers.kanban.pivotal_tracker_token.nil?
+          Lita.logger.error('Missing Pivotal Tracker token')
+          fail 'Missing Pivotal Tracker token'
+        end
+
+        if Lita.config.handlers.kanban.pivotal_tracker_project_id.nil?
+          Lita.logger.error('Missing Pivotal Tracker project id')
+          fail 'Missing Pivotal Tracker project id'
+        end
+
         TrackerApi::Client.new(token: config.pivotal_tracker_token)
           .project(config.pivotal_tracker_project_id)
           .stories(after_story_id: after_story_id, before_story_id: before_story_id)
