@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name          = "lita-kanban"
-  spec.version       = "0.1.0"
+  spec.version       = "0.1.1"
   spec.authors       = ["Shoma SATO"]
   spec.email         = ["noir.neo.04@gmail.com"]
   spec.description   = "A lita handler for build a Kanban board from Pivotal Tracker."
