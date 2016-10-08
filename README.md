@@ -1,5 +1,7 @@
 # lita-kanban
 
+[![Gem Version](https://badge.fury.io/rb/lita-kanban.svg)](https://badge.fury.io/rb/lita-kanban)
+
 A lita handler for build a Kanban board from Pivotal Tracker.
 
 ## License
